@@ -13,8 +13,8 @@ func Update[T any](obj interface{}, f UpdateFunc[T]) interface{} {
 	}
 
 	valueOfStruct := reflect.ValueOf(obj)
-
 	newValueOfStruct := reflect.New(typ).Elem()
+
 	for i := 0; i < typ.NumField(); i++ {
 
 		field := typ.Field(i)
